@@ -19,6 +19,7 @@ LOCAL_CFLAGS += -DANDROID_NDK
  
 LOCAL_PATH := $(SPHINX_PATH)/webrtc/common_audio/vad
 LOCAL_MODULE := sphinxvad
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 LOCAL_ARM_MODE := arm
  
 LOCAL_SRC_FILES := \
@@ -41,6 +42,7 @@ LOCAL_CFLAGS += -DWEBRTC_POSIX
  
 LOCAL_PATH := $(SPHINX_PATH)/webrtc/common_audio/signal_processing
 LOCAL_MODULE := sphinxsignal_processing
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 LOCAL_ARM_MODE := arm
  
 LOCAL_SRC_FILES := \
@@ -107,7 +109,7 @@ LOCAL_CFLAGS += -DANDROID_NDK
 
 LOCAL_PATH := $(SPHINX_PATH)/sphinxbase/src/libsphinxbase/fe
 LOCAL_MODULE := sphinxfe
-LOCAL_C_INCLUDES += $(SPHINX_PATH)  # Emilio Rueda
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 LOCAL_ARM_MODE := arm
 
 LOCAL_SRC_FILES := \
@@ -132,7 +134,7 @@ LOCAL_CFLAGS += -DANDROID_NDK
 
 LOCAL_PATH := $(SPHINX_PATH)/sphinxbase/src/libsphinxbase/feat
 LOCAL_MODULE := sphinxfeat
-LOCAL_C_INCLUDES += $(SPHINX_PATH)  # Emilio Rueda
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 
 LOCAL_SRC_FILES := \
   agc.c \
@@ -177,7 +179,7 @@ LOCAL_CFLAGS += -DANDROID_NDK
 
 LOCAL_PATH := $(SPHINX_PATH)/pocketsphinx/src/libpocketsphinx
 LOCAL_MODULE := pocketsphinx
-LOCAL_C_INCLUDES += $(SPHINX_PATH)  # Emilio Rueda
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 
 LOCAL_SRC_FILES := \
   acmod.c     \
@@ -236,7 +238,7 @@ LOCAL_CFLAGS += -DANDROID_NDK
 
 LOCAL_PATH := $(BASE_PATH)
 LOCAL_MODULE := pocketsphinx_wrap
-LOCAL_C_INCLUDES += $(SPHINX_PATH)  # Emilio Rueda
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 
 LOCAL_SRC_FILES := pocketsphinx_wrap.c
 
@@ -247,7 +249,7 @@ include $(CLEAR_VARS)
 
 LOCAL_PATH := $(BASE_PATH)
 LOCAL_MODULE := pocketsphinx_jni
-LOCAL_C_INCLUDES += $(SPHINX_PATH)  # Emilio Rueda
+LOCAL_C_INCLUDES += $(SPHINX_PATH) $(SPHINX_PATH)/webrtc # Emilio Rueda
 
 LOCAL_LDLIBS := -llog
 
