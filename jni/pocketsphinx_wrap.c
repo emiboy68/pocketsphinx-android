@@ -35,8 +35,8 @@ typedef struct {
 
 #include <pocketsphinx.h>
 
-const Diez_div_ln10 = 4.34294481903;
-const ln10_div_Diez = 0.23025850929;
+//const Diez_div_ln10 = 4.34294481903f;
+//const ln10_div_Diez = 0.23025850929f;
 
 	
 POCKETSPHINX_EXPORT

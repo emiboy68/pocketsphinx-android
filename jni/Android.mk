@@ -2,7 +2,7 @@
 
 # You MUST change this to the absolute path of the directory containing
 # sphinxbase and pocketsphinx source code.
-SPHINX_PATH := d:\sphinx
+SPHINX_PATH := e:\repos\sphinx
 #
 # Copy this Android.mk along with pocketsphinx_wrap.c and the contents of the 'edu' folder
 # built by swig to the jni/ directory of your Android project.
@@ -89,7 +89,7 @@ LOCAL_SRC_FILES := \
   hash_table.c \
   heap.c \
   listelem_alloc.c \
-  logmath.c.arm \
+  logmath.c \
   matrix.c \
   mmio.c \
   pio.c \
@@ -193,20 +193,20 @@ LOCAL_SRC_FILES := \
   fsg_search.c   \
   kws_detections.c \
   kws_search.c   \
-  hmm.c.arm     \
+  hmm.c     \
   mdef.c     \
-  ms_gauden.c.arm    \
-  ms_mgau.c.arm    \
-  ms_senone.c.arm    \
+  ms_gauden.c    \
+  ms_mgau.c    \
+  ms_senone.c   \
   ngram_search.c   \
   ngram_search_fwdtree.c \
   ngram_search_fwdflat.c \
   phone_loop_search.c  \
-	pocketsphinx.c emi_pocketsphinx.c \
+	pocketsphinx.c emi_pocketsphinx.c ps_alignment.c state_align_search.c \
   ps_lattice.c   \
   ps_mllr.c    \
-  ptm_mgau.c.arm    \
-  s2_semi_mgau.c.arm   \
+  ptm_mgau.c    \
+  s2_semi_mgau.c  \
   tmat.c     \
   vector.c
 
