@@ -23,6 +23,9 @@ android {
 	   cmake {
             // here, arguments, cppFlags, cFlags, ..  all work
             cppFlags  '-std=gnu++11'  // Emilio Rueda
+            arguments '-DANDROID_TOOLCHAIN=gcc'
+          // cppFlags  '-std=gnu++98'
+
 	    }
 	}
         ndk {
@@ -45,7 +48,7 @@ android {
 task mkdir {
     doLast {
         new File('build/generated-src/java').mkdirs()
-	new File('build/generated-src/cpp').mkdirs()
+	    new File('build/generated-src/cpp').mkdirs()
     }
 }
 

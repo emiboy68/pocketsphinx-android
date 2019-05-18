@@ -145,12 +145,18 @@ add_library( pocketsphinx_jni SHARED
         ${WEBRTC_SOURCES_ABS}
 )
 
-include_directories(E:/repos/sphinx/sphinxbase/include
+include_directories(
+        # D:\\Android\\android-ndk-windows\\sources\\cxx-stl\\llvm-libc++\\include
+        E:/repos/sphinx/sphinxbase/include
         E:/repos/sphinx/sphinxbase/include/android
         E:/repos/sphinx/sphinxbase/include/sphinxbase
         E:/repos/sphinx/pocketsphinx/include
         E:/repos/sphinx
         E:/repos/sphinx/webrtc
+        E:/repos/abseil-cpp
+        #  E:/repos/tensorflow
+        # E:/repos/tensorflow/tensorflow/c
+        # E:/repos/tensorflow/tensorflow/lite/
         )
 
 add_definitions(-DHAVE_CONFIG_H -DWEBRTC_POSIX)
