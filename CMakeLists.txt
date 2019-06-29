@@ -48,7 +48,6 @@ fe/fe_warp_affine.c
 fe/fe_warp_inverse_linear.c
 fe/fe_warp_piecewise_linear.c
 fe/fixlog.c
-#fe/yin.c
 feat/agc.c
 feat/cmn.c
 feat/cmn_live.c
@@ -137,16 +136,14 @@ foreach(source ${POCKETSPHINX_SOURCES})
 endforeach()
 
 add_library( pocketsphinx_jni SHARED
-             #jni/pocketsphinx_wrap.c
-             #jni/sphinxbase_wrap.c
-             build/generated-src/cpp/pocketsphinx_wrap.c
-             build/generated-src/cpp/sphinxbase_wrap.c
-	     ${SPHINXBASE_SOURCES_ABS} ${POCKETSPHINX_SOURCES_ABS}
-        ${WEBRTC_SOURCES_ABS}
+            build/generated-src/cpp/pocketsphinx_wrap.c
+            build/generated-src/cpp/sphinxbase_wrap.c
+	        ${SPHINXBASE_SOURCES_ABS}
+            ${POCKETSPHINX_SOURCES_ABS}
+            ${WEBRTC_SOURCES_ABS}
 )
 
 include_directories(
-        # D:\\Android\\android-ndk-windows\\sources\\cxx-stl\\llvm-libc++\\include
         E:/repos/sphinx/sphinxbase/include
         E:/repos/sphinx/sphinxbase/include/android
         E:/repos/sphinx/sphinxbase/include/sphinxbase
@@ -154,7 +151,8 @@ include_directories(
         E:/repos/sphinx
         E:/repos/sphinx/webrtc
         E:/repos/abseil-cpp
-        #  E:/repos/tensorflow
+        # D:\\Android\\android-ndk-windows\\sources\\cxx-stl\\llvm-libc++\\include
+        # E:/repos/tensorflow
         # E:/repos/tensorflow/tensorflow/c
         # E:/repos/tensorflow/tensorflow/lite/
         )
