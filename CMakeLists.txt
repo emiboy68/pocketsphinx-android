@@ -28,7 +28,7 @@ common_audio/vad/vad_gmm.c
         common_audio/signal_processing/spl_init.c
         common_audio/signal_processing/spl_inl.c
         common_audio/signal_processing/vector_scaling_operations.c
-        rtc_base/checks.cc
+       # rtc_base/checks.cc
         )
 
 set(WEBRTC_SOURCES_ABS)
@@ -90,7 +90,7 @@ util/sbthread.c
 util/slamch.c
 util/slapack_lite.c
 util/strfuncs.c
-)
+        util/emi_Yin.c)
 
 set(SPHINXBASE_SOURCES_ABS)
 foreach(source ${SPHINXBASE_SOURCES})
